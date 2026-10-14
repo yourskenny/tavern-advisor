@@ -1,0 +1,6 @@
+fastapi==0.135.1
+uvicorn==0.41.0
+hslog==1.20.0
+hearthstone==9.22.0
+httpx==0.28.1
+pytest==8.4.2
