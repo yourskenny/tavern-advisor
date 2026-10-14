@@ -8,7 +8,7 @@ Windows 本地实时酒馆战棋工作台。第一阶段复用 HearthSim 的 `hs
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\python -m pip install -r requirements.lock.txt
 npm install
 .\.venv\Scripts\python scripts/sync_cards.py
 npm run dev
@@ -30,6 +30,10 @@ Verbose=true
 ```
 
 实时读取要求日志包含完整的 CREATE_GAME。身份不明、非酒馆模式、战斗阶段或金币未知时不输出购买建议。日志可能不含商店、升级费用、英雄技能费用等完整信息：这些字段显示未知，不补造数据。玩家编号可在连接页显式指定；自动识别失败时不会默认选择玩家 1。
+
+日志超过 120 秒未更新时暂停实时建议；解析错误保持可见，修正文件后点击连接可重新读取。
+
+导入目前保存整份日志的最后一个局面；实时监听保存每次可观察的局面变化。复盘历史的建议按当前规则重新计算，尚不保存当时建议版本。JSON 导出最多包含最近 1,000 个快照。
 
 ## 验证
 

@@ -1,0 +1,10 @@
+{
+  "observed_on": "2026-10-14",
+  "url": "https://api.hearthstonejson.com/v1/255026/zhCN/cards.json",
+  "build": "255026",
+  "sha256": "7c9d0321b22bef8d9c4e67397c7b8110aac149164a95dd554118f9b6dc638299",
+  "locale": "zhCN",
+  "count": 36390,
+  "pool_verified": false,
+  "client_build_verified": false
+}

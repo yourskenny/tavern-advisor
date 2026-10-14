@@ -8,3 +8,4 @@ data/
 output/
 .env
 *.log
+.playwright-cli/
